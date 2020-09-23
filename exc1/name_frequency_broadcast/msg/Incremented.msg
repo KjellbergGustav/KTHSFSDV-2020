@@ -1,0 +1,2 @@
+int32 incrementor_value
+int32 multiplier
