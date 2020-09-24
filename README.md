@@ -1,6 +1,7 @@
 # KTHSFSDV-2020
 Tasks for KTHFS 2020 application
 
+<<<<<<< HEAD
 # ROS exercice
 
 ## Installation
@@ -159,3 +160,7 @@ $ python main.py
 The program will now run, first asking you what you want `t_0` to be, keep in mind that this is defined as an integer. Second, it will prombt you to enter `t_n`, i.e the for span of `t` you want see the function.
 
 You will see a graph showing up, similair to the one below.
+
+![One period of the function](https://media.giphy.com/media/uvUIXY8bcCFQ7aGrOl/giphy.gif)
+
+The graph will show the function value over time `t` and dynamically adapt its axes. As the function is periodic (mentioned in the exercise instruction) we do not want to show redundant inforamtion. Therefore, the animation will stop after the first period. You will then be prombted with the option to continue to animate the graph. If you choose yes, the program will run until `t_n`. If not you will have the option to save the graph. You will also get this option as you reach `t_n`.

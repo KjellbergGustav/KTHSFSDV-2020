@@ -84,7 +84,6 @@ class Graphics():
             plt.legend(loc='upper left') # place the legend at the top left corner
             plt.show()
             plt.pause(0.01) #Pause for more entertaining animation
-            plt.savefig('/Users/gustavkjellberg/Documents/KTH/KTHSFSDV-2020/exc2/plots/gif'+str(index))
             if index == int(math.floor(period/step_size)): # When you have seen one period you should have insight enough to understand the function, being able to stop and save is thus good
                 continue_animation = input('You\'ve just seen one period of the function, continue? [y/n]\n')
                 if continue_animation != 'y':
@@ -95,5 +94,4 @@ class Graphics():
                 else:
                     print('There\'s no more data left')
                 self.save_fig(plt)
-            
             plt.clf()
