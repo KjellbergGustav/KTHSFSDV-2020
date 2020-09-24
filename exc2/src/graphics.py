@@ -3,7 +3,7 @@ Author: Gustav Kjellberg
 Email: kjellberg.p.gustav@gmail.com
 Licence: MIT
 Creation data: 22 Sept 2020
-Last modified: 23 Sept 2020
+Last modified: 24 Sept 2020
 """
 
 import math

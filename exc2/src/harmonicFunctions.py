@@ -9,8 +9,6 @@ Last modified: 23 Sept 2020
 import math as math
 
 import numpy as np
-import pandas as pd
-
 
 class HarmonicFunctions():
     """[summary]
