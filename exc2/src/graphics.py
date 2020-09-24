@@ -13,6 +13,7 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import animation
+import tikzplotlib
 
 
 class Graphics():
@@ -53,7 +54,11 @@ class Graphics():
         save_fig = input('Do you want to save the figure? [y/n]\n')
         if save_fig == 'y':
             fig_name = input('Enter figure name: ')
-            figure.savefig('plots/'+fig_name)
+            figure.savefig('[your-path]/KTH/KTHSFSDV-2020/exc2/plots/'+fig_name)
+            figure.style.use('ggplot')
+            tikzplotlib.save("[your-path]/KTHSFSDV-2020/exc2/plots/"+fig_name+".tex") # tex source code
+            tikzplotlib.save("[your-path]/KTHSFSDV-2020/exc2/plots/"+fig_name+".pgf") # To include in tex document with fig
+
         sys.exit()
 
     def plot_2d_live(self):
@@ -79,6 +84,7 @@ class Graphics():
             plt.legend(loc='upper left') # place the legend at the top left corner
             plt.show()
             plt.pause(0.01) #Pause for more entertaining animation
+            plt.savefig('/Users/gustavkjellberg/Documents/KTH/KTHSFSDV-2020/exc2/plots/gif'+str(index))
             if index == int(math.floor(period/step_size)): # When you have seen one period you should have insight enough to understand the function, being able to stop and save is thus good
                 continue_animation = input('You\'ve just seen one period of the function, continue? [y/n]\n')
                 if continue_animation != 'y':
@@ -89,4 +95,5 @@ class Graphics():
                 else:
                     print('There\'s no more data left')
                 self.save_fig(plt)
+            
             plt.clf()
