@@ -1,15 +1,20 @@
 #!/usr/bin/env python
 
-import rospy # import rospy as that is what we'll be working with
-from std_msgs.msg import Int32 #import the message type. To minimize the size I'm satisfied with 32 bit as it will let me send an int up to 2.1M
+import rospy  # import rospy as that is what we'll be working with
 from name_frequency_broadcast.msg import Incremented
+from std_msgs.msg import \
+    Int32  # import the message type. To minimize the size I'm satisfied with 32 bit as it will let me send an int up to 2.1M
 
 
 def incrementor():
+    """[summary]
+        This function publishes a value k+(n*i) to the topic kjellberg
+        where k = 1, n = 4, i = [0,inf].
+    """    
     pub = rospy.Publisher('kjellberg', Int32, queue_size=10)
     rospy.init_node('name_frequency_boradcast_node', anonymous=True) # Anonymous ensures us that the node name is unique.
     rate = rospy.Rate(20) # The instr says that we should be sending at 20 Hz.
-    #data = Incremented()
+    #data = Incremented() # Keeping the custom msgs for discussion at interview.
     set_of_ints = []
     interator = 0
     k =1 
