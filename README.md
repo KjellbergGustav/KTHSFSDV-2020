@@ -188,7 +188,7 @@ $ cd ~/KTHFSDV-2020/exc2/src
 ```
 $ python main.py
 ```
-The program will now run, first asking you what you want `t_0` to be, keep in mind that this is defined as an integer. Second, it will prombt you to enter `t_n`, i.e the for span of `t` you want see the function.
+The program will now run, first asking you what you want `t_0` to be, keep in mind that this is defined as an integer. Second, it will prombt you to enter `t_end`, i.e the integer `t` you want the function to stop at. Each step size is 0.01.
 
 You will see a graph showing up, similair to the one below.
 
