@@ -1,6 +1,6 @@
-#import rosbag_pandas as rbpd
+import rosbag_pandas as rbpd
 import pandas as pd
-import pyrosbag
+#import pyrosbag
 import rosbag
 
 class ReadData():
